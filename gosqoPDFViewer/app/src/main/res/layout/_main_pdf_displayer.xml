@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    tools:context="viewer_pro.viewer._Main_PDF_Displayer">
+
+    <!-- PDFTab, CloseApp Btn Selection -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#0A71A5"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tab_PDF_Group"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="9"
+            android:paddingLeft="6dp"
+            android:padding="5dp"
+            app:tabGravity="center"
+            app:tabMode="scrollable"
+            app:tabTextColor="@android:color/black" />
+
+        <ImageButton
+            android:id="@+id/btn_close_app"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:padding="8dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/close_app" />
+
+
+    </LinearLayout>
+
+    <!-- TopMenuSelection -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#E5F3FB"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="3dp">
+
+            <!-- 탑 메뉴 열기 전 레이아웃 -->
+            <LinearLayout
+                android:id="@+id/top_menu_ready"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="9"
+                    android:gravity="left"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp">
+
+                </LinearLayout>
+
+                <ImageButton
+                    android:id="@+id/btn_topmenu_open"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:padding="8dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/up" />
+
+            </LinearLayout>
+
+            <!-- 탑 메뉴 연 후 레이아웃 -->
+            <LinearLayout
+                android:id="@+id/top_menu"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="9"
+                    android:gravity="center_vertical|start"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp">
+
+                    <ImageButton
+                        android:id="@+id/btn_color_picker"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@android:color/transparent"
+                        android:padding="8dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/pencil_blue" />
+
+                    <ImageButton
+                        android:id="@+id/btn_add_taps"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@android:color/transparent"
+                        android:padding="8dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/addpdf"/>
+
+                    <ImageButton
+                        android:id="@+id/btn_clear_taps"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@android:color/transparent"
+                        android:padding="10dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/close_all_tabs" />
+
+                </LinearLayout>
+
+                <ImageButton
+                    android:id="@+id/btn_topmenu_close"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:padding="8dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/open_top_menu" />
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <!-- PDFViewSelection -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="11">
+
+        <!-- PageCounter TextView Selection -->
+
+        <viewer_pro.viewer.Swipe_ViewPager
+            android:id="@+id/pdf_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white" />
+
+    </FrameLayout>
+
+
+
+</LinearLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context="._Permission_Request_Page">
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:paddingLeft="35dp"
+        android:src="@drawable/usb_check" />
+
+    <TextView
+        android:id="@+id/tv_info"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="80dp"
+        android:gravity="center"
+        android:text="This app needs a file access pemission.
+If you agree grant a permission for this app, click this button."
+        android:textColor="#0A71A5"
+        android:textSize="16dp" />
+
+    <ImageButton
+        android:id="@+id/btn_check_permission"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:scaleType="fitCenter"
+        android:background="@android:color/transparent"
+        android:src="@drawable/checked_symbol" />
+
+</LinearLayout>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    tools:context="._PDF_View_Fragment">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="10">
+
+        <com.github.barteksc.pdfviewer.PDFView
+            android:id="@+id/fragview_pdfview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <viewer_pro.viewer.Paint_Painter
+            android:id="@+id/frg_paint_selection"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="10dp"
+        android:layout_weight="1"
+        android:background="@android:color/transparent"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/fragview_tv_pagecount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#0A71A5"
+            android:gravity="center"
+            android:paddingLeft="5dp"
+            android:paddingTop="1dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="2dp"
+            android:textColor="#FFFFFF"
+            android:textSize="14dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#0A71A5"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+
+        <SeekBar
+            android:id="@+id/fragview_seekbar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:max="0"
+            android:progress="0" />
+
+        <ImageButton
+            android:id="@+id/fragview_btn_eraser"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@android:color/transparent"
+            android:padding="8dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/eraser" />
+
+        <ImageButton
+            android:id="@+id/fragview_btn_paintgmode"
+            android:layout_marginRight="10dp"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/pencil"
+            android:scaleType="fitCenter" />
+
+        <ImageButton
+            android:id="@+id/fragview_btn_pagingmode"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/swipe"
+            android:scaleType="fitCenter" />
+
+        <ImageButton
+            android:id="@+id/fragview_btn_prev"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@android:color/transparent"
+            android:padding="8dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/previous_page" />
+
+        <ImageButton
+            android:id="@+id/fragview_btn_next"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@android:color/transparent"
+            android:padding="8dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/next_page" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
