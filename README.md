@@ -47,7 +47,9 @@ minSdkVersion 16
 
 targetSdkVersion 25
 
-Commit Log
+***
+
+## Commit Log
 2018-10-19 First Upload
 2018-10-28 Tab name bug fix
 
